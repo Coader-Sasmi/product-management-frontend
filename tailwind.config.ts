@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         primary: "#2dae52", // green
         secondary: "#2dae93", // light blue
+        tertiary: "#ae2d48", // dark red
         fontcolor: "#263238", //light gray
       },
     },
