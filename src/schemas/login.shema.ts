@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 
 import * as Yup from "yup";
 
@@ -14,21 +15,33 @@ const loginInfo = () => {
   const loginSchema = [
     {
       key: "1",
-      name: "hobbies",
-      label: "Hobbies and Interests",
+      name: "name",
+      label: "Name",
       type: "text",
       required: true,
-      validationSchema: Yup.string().required("Interests is required").trim(),
+      validationSchema: Yup.string().required("Name is required").trim(),
       initialValue: "",
       className: "col-span-full",
     },
     {
       key: "2",
-      name: "expectations",
-      label: "Expectations",
-      type: "text",
+      name: "email",
+      label: "Email",
+      type: "email",
       required: true,
-      validationSchema: Yup.string().required("Expectations is required"),
+      validationSchema: Yup.string().required("Email is required"),
+      initialValue: "",
+      className: "col-span-full",
+    },
+    {
+      key: "3",
+      name: "password",
+      label: "Password",
+      type: "password",
+      required: true,
+      validationSchema: Yup.string()
+        .min(6, "Password must be at least 6 characters")
+        .required("Password is required"),
       initialValue: "",
       className: "col-span-full",
     },

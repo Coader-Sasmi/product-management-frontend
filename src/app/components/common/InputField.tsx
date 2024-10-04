@@ -106,7 +106,10 @@ export default function InputField({
           disabled={disabled}
           variant={variant}
           className={styleContact}
-          InputProps={InputProps}
+          InputProps={{
+            ...InputProps,
+            style: { height: "40px", background: "#f0f0f0" },
+          }}
           value={value}
           onChange={onChange}
           onBlur={onBlur}
